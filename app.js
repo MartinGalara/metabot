@@ -77,6 +77,10 @@ const main = async () => {
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowPrincipal])
 
+    console.log(process.env.JWTOKEN)
+    console.log(process.env.NUMBER_ID)
+    console.log(process.env.VERIFY_TOKEN)
+
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: process.env.JWTOKEN,
         numberId: process.env.NUMBER_ID,
